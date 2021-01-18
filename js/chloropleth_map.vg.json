@@ -11,16 +11,16 @@
   },
   "transform": [
     {
-      "lookup": "properties.Country_Or_Region",
+      "lookup": "properties.county",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_FinalAssignment/main/data/electionData.csv"
+          "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_FinalAssignment/main/data/county_statistics.csv"
         },
-        "key": "Country_Or_Region",
-        "fields": ["Score"]
+        "key": "County",
+        "fields": ["percentage20_Donald_Trump"]
       }
     },
-    {"calculate": "datum.Score", "as": "Happiness Score"}
+    {"calculate": "datum.percentage20_Donald_Trump", "as": "Republican Per"}
   ],
   "projection": {
     "type": "albersUsa"
