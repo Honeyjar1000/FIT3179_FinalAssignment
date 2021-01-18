@@ -1,0 +1,35 @@
+#scatter_plot {
+	display: inline;
+	margin: 10px 10px 10px 10px;
+	left: 1%;
+}
+
+#choropleth_map {
+	display: inline-block;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#barChart {
+	display: block;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#pieChart {
+	display: inline-block;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+b {
+	font-color: "white";
+	position: absolute;
+	font-size: 20px;
+	margin: auto;
+}
+
+body {
+	background-color: black;
+	color: white;
+}
