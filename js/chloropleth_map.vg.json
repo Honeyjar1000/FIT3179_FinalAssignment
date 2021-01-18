@@ -3,22 +3,25 @@
   "width": 500,
   "height": 300,
   "data": {
-    "url": "data/us-10m.json",
+    "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_FinalAssignment/main/js/americaMap.geo.json",
     "format": {
       "type": "topojson",
-      "feature": "counties"
+      "feature": "America"
     }
   },
-  "transform": [{
-    "lookup": "id",
-    "from": {
-      "data": {
-        "url": "data/unemployment.tsv"
-      },
-      "key": "id",
-      "fields": ["rate"]
-    }
-  }],
+  "transform": [
+    {
+      "lookup": "properties.Country_Or_Region",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_FinalAssignment/main/data/electionData.csv"
+        },
+        "key": "Country_Or_Region",
+        "fields": ["Score"]
+      }
+    },
+    {"calculate": "datum.Score", "as": "Happiness Score"}
+  ],
   "projection": {
     "type": "albersUsa"
   },
